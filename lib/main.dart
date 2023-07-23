@@ -9,14 +9,13 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // User information (You can add user details here)
+          
           SizedBox(height: 20),
           Text('User Name', style: TextStyle(fontSize: 24)),
           SizedBox(height: 10),
-          // Expense Total (You can add expense total here)
           Text('Total Expenses: \$500', style: TextStyle(fontSize: 18)),
           SizedBox(height: 20),
-          // List of categories
+          
           ListTile(
             leading: Icon(Icons.category),
             title: Text('Category 1'),
@@ -29,7 +28,7 @@ class HomeScreen extends StatelessWidget {
               );
             },
           ),
-          // Add more categories as required
+          
         ],
       ),
     );
@@ -47,11 +46,11 @@ class ExpenseScreen extends StatelessWidget {
         title: Text('Expenses - $category'),
       ),
       body: ListView.builder(
-        itemCount: 5, // Replace with the actual number of expenses for this category
+        itemCount: 5, 
         itemBuilder: (context, index) {
           return ListTile(
             title: Text('Expense ${index + 1}'),
-            subtitle: Text('\$50'), // Replace with the actual expense amount
+            subtitle: Text('\$50'), 
           );
         },
       ),
@@ -94,7 +93,7 @@ class AddExpenseScreen extends StatelessWidget {
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              // Implement the logic to add the expense
+              
               Navigator.pop(context);
             },
             child: Text('Add Expense'),
